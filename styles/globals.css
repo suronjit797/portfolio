@@ -67,3 +67,15 @@ footer {
 .primaryBtn:hover {
   background-color: #64ffdb1f;
 }
+
+@media (min-width: 800px) {
+  .layout_body {
+    padding: 0 100px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .layout_body {
+    padding: 0 150px;
+  }
+}

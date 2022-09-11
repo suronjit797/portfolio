@@ -1,0 +1,40 @@
+.left{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.line{
+    height: 15vh;
+    width: 1px;
+    background-color: #ccd6f6;
+    margin-top: 20px;
+}
+
+.icons{
+    font-size: 22px;
+    margin: 10px 0;
+    color: #ccd6f6;
+    transition: .2s ease-in-out;
+}
+
+.icons:hover{
+    color: #64ffda;
+    transform: translateY(-5px);
+}
+
+@media (max-width:1000px) {
+    .left{
+        width: 100px;
+    }
+}
+
+@media (max-width:800px) {
+    .left{
+        display: none;
+    }
+}

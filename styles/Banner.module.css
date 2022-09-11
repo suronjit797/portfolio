@@ -1,5 +1,7 @@
 .banner{
-    margin-bottom: 80px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    min-height: calc(100vh - 100px);
 }
 
 
