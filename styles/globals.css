@@ -2,20 +2,24 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter' ,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-nav{
-  font-family: "fira code";
+  background-color: #0a192f;
+  color: #ccd6f6;
 }
 
+
 a {
-  color: inherit;
+  color: #64ffda;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -28,13 +32,38 @@ a {
   }
 } */
 
-
-.layout{
+.layout_body {
+  padding: 0 30px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-footer{
+footer {
   margin-top: auto;
+}
+
+.textPrimary {
+  color: #64ffda;
+}
+.fontPrimary {
+  font-family: 'fira code', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* button */
+.primaryBtn {
+  background-color: transparent;
+  border: 1px solid #64ffda;
+  outline: none;
+  box-shadow: 0;
+  color: #64ffda;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 8px 20px;
+  transition: .3s ease-in-out;
+}
+
+.primaryBtn:hover {
+  background-color: #64ffdb1f;
 }

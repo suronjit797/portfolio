@@ -12,8 +12,10 @@ const Layout = ({ children, title }) => {
             </Head>
 
             <Navbar />
-            {children}
-            <Footer />
+            <div className="layout_body">
+                {children}
+                <Footer />
+            </div>
         </div>
     );
 };

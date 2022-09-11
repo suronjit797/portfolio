@@ -1,0 +1,121 @@
+.nav {
+    font-family: 'Fira Code';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px 30px;
+    overflow-x: hidden;
+}
+
+.nav .nav-logo{
+    position: relative;
+    z-index: 999;
+}
+
+.main_nav ul {
+    list-style: none;
+    transition: .4s ease-in-out;
+    margin: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.main_nav ul li a{
+    color: #ccd6f6;
+}
+.main_nav ul li a span {
+    color: #64ffda;
+}
+
+@media (min-width:801px) {
+    .bars {
+        display: none;
+    }
+    .main_nav ul{
+        display: flex;
+        gap: 0 30px ;
+        align-items: center;
+    }
+}
+
+@media (max-width:800px) {
+    .main_nav {
+        position: fixed;
+        top: 0;
+        right: -200vh;
+        height: 100vh;
+        width: 100%;
+        transition: .4s ease-in-out;
+
+    }
+    .main_nav ul{
+        padding-top: 50px;
+        margin-left: 100px;
+        background-color: #0d2344;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav.active .main_nav{
+        right: 0;
+        top: 0;
+    }
+
+    .bars {
+        width: 35px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transition: .3s ease-in-out;
+        z-index: 9999;
+        position: relative;
+    }
+
+    .bars span {
+        height: 2px;
+        margin: 3px 0;
+        background-color: #64ffda;
+        transition: .3s ease-in-out;
+
+    }
+
+    .bars span:first-child {
+        width: 100%;
+    }
+
+    .bars span:nth-child(2) {
+        width: 80%;
+    }
+
+    .bars span:last-child {
+        width: 60%;
+    }
+
+    .nav.active .bars {
+        transform: rotate(360deg);
+    }
+
+    .nav.active .bars span {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav.active .bars span:first-child {
+        transform: rotate(50deg) translate(2px);
+    }
+
+    .nav.active .bars span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav.active .bars span:last-child {
+        transform: rotate(-50deg) translate(2px);
+    }
+
+
+
+
+}
