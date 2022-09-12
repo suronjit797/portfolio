@@ -2,6 +2,7 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Left from "./Left";
 import Navbar from "./Navbar";
+import Right from "./Right";
 
 const Layout = ({ children, title }) => {
     return (
@@ -17,6 +18,7 @@ const Layout = ({ children, title }) => {
                 <Left/>
                 {children}
                 <Footer />
+                <Right />
             </div>
         </div>
     );
