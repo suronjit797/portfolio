@@ -1,9 +1,10 @@
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import Link from 'next/link';
 import styles from '../styles/Banner.module.css'
+import { useRouter } from 'next/router'
 
 const Banner = () => {
+    const router = useRouter()
     return (
         <section className={styles.banner}>
             <Typography
@@ -36,12 +37,13 @@ const Banner = () => {
                 textAlign: 'justify',
                 my: 3
             }}>
-                <Typography variant='p' color='#8892b0' sx={{lineHeight: '1.5'}}>
+                <Typography variant='p' color='#8892b0' sx={{ lineHeight: '1.5' }}>
                     I’m a web developer specializing in frontend (and occasionally on backend) exceptional digital experiences. Currently, I&apos;m focusing on the backend to master it.
                 </Typography>
             </Box>
 
-                <a href='/' className={`primaryBtn ${styles.bannerBtn}`}  target='_blank'> Check  out  my  course! </a>
+            <Button variant="outlined" onClick={()=>router.push('/')} color="info" size='large'> Check  out  my  course! </Button>
+
 
         </section>
     );

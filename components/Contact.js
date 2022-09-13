@@ -12,7 +12,7 @@ const Contact = () => {
                     id="name"
                     label="Name"
                     type='text'
-                    variant="standard"
+                    variant="filled"
                     color='secondary'
                     fullWidth
                     autoComplete='off'
@@ -30,7 +30,7 @@ const Contact = () => {
                     id="email"
                     label="Email"
                     type='email'
-                    variant="standard"
+                    variant="filled"
                     color='secondary'
                     fullWidth
                     autoComplete='off'
@@ -47,7 +47,7 @@ const Contact = () => {
                 <TextField
                     id="message"
                     label="Message"
-                    variant="standard"
+                    variant="filled"
                     color='secondary'
                     multiline
                     rows={4}
@@ -63,7 +63,7 @@ const Contact = () => {
                         '& .MuiInputBase-root::before': { borderColor: '#fff !important' },
                     }}
                 />
-                <Button variant="contained" color="secondary" endIcon={<SendIcon />}> Send Message </Button>
+                <Button type='submit' variant="outlined" color="info" size='large' endIcon={<SendIcon />}> Send Message </Button>
             </form>
         </Box>
     );

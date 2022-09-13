@@ -1,16 +1,16 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 const Navbar = () => {
     const [nav, setNav] = useState(false)
 
-    useEffect(()=>{
-        if (nav){
+    useEffect(() => {
+        if (nav) {
             document.body.classList.add('blur')
-        }else{
+        } else {
             // document.body.classList.remove('blur')
         }
-    },[nav])
+    }, [nav])
 
     return (
         <nav className={nav ? 'nav active' : 'nav'}>
@@ -23,7 +23,10 @@ const Navbar = () => {
                     <li><a href="#"> <span>02.</span> Experience </a></li>
                     <li><a href="#"> <span>03.</span> work </a></li>
                     <li><a href="#"> <span>04.</span> contact </a></li>
-                    <li><a href="#" download className='primaryBtn'> resume  </a></li>
+                    <li><a href="#" download>
+                        <Button variant="outlined" color="info" size='small' sx={{textTransform: 'capitalize', px: 3}}> resume </Button>
+                    </a></li>
+
                 </ul>
             </Box>
 
